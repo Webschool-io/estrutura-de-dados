@@ -1,22 +1,17 @@
-(function () {
-  var l=5, c=5, i, j;
-  var min = 0;
-  var max = 9;
-  // entro com os dados
-  var matriz = [];
 
+  var l=5, c=5, i, j;
   var matriz = [[2,2,2,2,2],  
        [1,0,0,0,1],  
        [1,0,1,0,1],
        [1,0,0,0,1],  
        [1,1,1,1,1]];
-   
-  console.log('Matriz', matriz);
-   
-  matriz_transposta (l, c, matriz);
-   
 
-  function matriz_transposta (l, c, matriz) {
+  // for generate random data
+  var generateRandom = function (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min
+  }   
+
+  module.exports = function (l, c, matriz) {
     var i, j, aux;
      
     for (i = 0; i < l; i++) {
@@ -31,14 +26,11 @@
      
     for (i = 0; i < l; i++) {
       for (j = 0; j < c; j++) {
-        console.log("%d ",matriz[i][j]);
+        // console.log("%d ",matriz[i][j]);
       }
-      console.log("\n");
+      // console.log("\n");
     }
     console.log('Matriz transposta', matriz);
+    return matriz;
   }
-  // for generate random data
-  function generateRandom (min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min
-  }    
-})();
+    
