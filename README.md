@@ -2,6 +2,7 @@
 
 Objetivo desse repositório é juntar a maioria dos exercícios de Estrutura de Dados ensinados nas faculdades onde o C ainda é língua mãe, o que eu CONCORDO! Mas também podemos mostrar que podem ser feitos em JS.
 
+<<<<<<< HEAD
 Caso você queira contribuir nem que seja apenas com os exercícios em C, favor dar um Pull Request com o exercício e abrir uma issue para que o mesmo seja passado para JS.
 
 ##Testes
@@ -14,3 +15,6 @@ Instalando o Mocha
 Rodando um teste
 
     mocha matriz-transposta-test.js   
+=======
+Caso você queira contribuir nem que seja apenas com os exercícios em C, favor dar um Pull Request com o exercício e abrir uma issue para que o mesmo seja passado para JS.
+>>>>>>> parent of 7b4a627... README explicando como rodar os testes
