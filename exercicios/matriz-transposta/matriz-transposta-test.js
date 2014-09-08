@@ -10,11 +10,12 @@ type: md
 já que só podemos aceitar Arrays.
 
 
-**Precisa ser matriz quadrada**
+**Precisa ser matriz quadrada?**
 - Só podemos transpor uma matriz quadrada
 
-****
-- 
+**Precisa ser igual?**
+- A resposta da funcão matriz_tranposta que usa a variável matriz 
+precisa ser igual a variável matriz_resultado
 
 */
 describe('Matriz Transposta', function () {
@@ -28,8 +29,7 @@ describe('Matriz Transposta', function () {
            [1, 1, 1, 1, 1]];
 
       var mt = Matriz.matriz_transposta(l, c, matriz);
-      // console.log('typo: ', matriz instanceof Array);
-      assert(matriz instanceof Array);
+      assert(mt instanceof Array);
     });
   });
 
@@ -55,9 +55,7 @@ describe('Matriz Transposta', function () {
            [1, 0, 0, 0, 1],
            [1, 1, 1, 1, 1]];
 
-      // var mt = Matriz.matriz_transposta(l, c, matriz);
       var columns = Matriz.countColumns(l, c, matriz);
-      // console.log();
       assert.equal(c, columns);
     });
     it('Verificando se é quadrada', function () {
@@ -68,18 +66,17 @@ describe('Matriz Transposta', function () {
            [1, 0, 0, 0, 1],
            [1, 1, 1, 1, 1]];
 
-      // var mt = Matriz.matriz_transposta(l, c, matriz);
       var columns = Matriz.countColumns(l, c, matriz);
       var lines = Matriz.countLines(l, c, matriz);
       var total = Matriz.countElements(l, c, matriz);
-      // console.log();
+
       assert.equal(total/c, columns);
       assert.equal(total/l, lines);
     });
   });
 
-  describe('Matriz Transposta', function () {
-    it('precisa ser igual', function () {
+  describe('Precisa ser transposta', function () {
+    it('Verificando se o retorno é a matriz transposta', function () {
       var l = 5, c = 5;
       var matriz = [[2, 2, 2, 2, 2],
            [1, 0, 0, 0, 1],
