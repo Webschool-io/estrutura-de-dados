@@ -1,25 +1,10 @@
 var Matriz = require('./matriz-transposta'),
   assert = require("assert");
 
-/*
-type: md
-
-**Precisa ser matriz?**
-
-- Teste para verificar o tipo do objeto que será transposto, 
-já que só podemos aceitar Arrays.
-
-
-**Precisa ser matriz quadrada?**
-- Só podemos transpor uma matriz quadrada
-
-**Precisa ser igual?**
-- A resposta da funcão matriz_tranposta que usa a variável matriz 
-precisa ser igual a variável matriz_resultado
-
-*/
+/*global describe */
 describe('Matriz Transposta', function () {
   describe('Precisa ser matriz', function () {
+    /*global it */
     it('Verificando se o objeto é um Array', function () {
       var l = 5, c = 5;
       var matriz = [[2, 2, 2, 2, 2],
@@ -43,20 +28,20 @@ describe('Matriz Transposta', function () {
            [1, 1, 1, 1, 1]];
 
       // var mt = Matriz.matriz_transposta(l, c, matriz);
-      var lines = Matriz.countLines(l, c, matriz);
+      var lines = Matriz.countLines(matriz);
       // console.log();
       assert.equal(l, lines);
     });
     it('Verificando quantidade de colunas', function () {
-      var l = 5, c = 5;
+      var valor_base = 5;
       var matriz = [[2, 2, 2, 2, 2],
            [1, 0, 0, 0, 1],
            [1, 0, 1, 0, 1],
            [1, 0, 0, 0, 1],
            [1, 1, 1, 1, 1]];
 
-      var columns = Matriz.countColumns(l, c, matriz);
-      assert.equal(c, columns);
+      var colunas = Matriz.countColumns(matriz);
+      assert.equal(valor_base, colunas);
     });
     it('Verificando se é quadrada', function () {
       var l = 5, c = 5;
@@ -66,12 +51,12 @@ describe('Matriz Transposta', function () {
            [1, 0, 0, 0, 1],
            [1, 1, 1, 1, 1]];
 
-      var columns = Matriz.countColumns(l, c, matriz);
-      var lines = Matriz.countLines(l, c, matriz);
+      var columns = Matriz.countColumns(matriz);
+      var lines = Matriz.countLines(matriz);
       var total = Matriz.countElements(l, c, matriz);
 
-      assert.equal(total/c, columns);
-      assert.equal(total/l, lines);
+      assert.equal(total / c, columns);
+      assert.equal(total / l, lines);
     });
   });
 

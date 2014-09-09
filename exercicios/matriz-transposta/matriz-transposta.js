@@ -1,4 +1,3 @@
-
 'use strict';
 
 module.exports = {
@@ -14,15 +13,6 @@ module.exports = {
         }
       }
     }
-
-    // for (i = 0; i < l; i++) {
-    //   for (j = 0; j < c; j++) {
-    //     console.log("%d ", matriz[i][j]);
-    //   }
-    //   console.log("\n");
-    // }
-    // console.log('Matriz transposta', matriz);
-
     return matriz;
   },
   generateRandom: function (min, max) {
@@ -30,59 +20,27 @@ module.exports = {
   },
   countElements: function (linhas, colunas, matriz) {
     var linhaCount, colunaCount, elementCount = 0;
-    // console.log(matriz);
     for (linhaCount = 0; linhaCount < linhas; linhaCount++) {
-      // console.log('linhas: ', matriz[linha][coluna]);
-      // console.log(linhaCount);
       for (colunaCount = 0; colunaCount < colunas; colunaCount++) {
         elementCount++;
       }
     }
-    // console.log(elementCount);
     return elementCount;
   },
-  countLines: function (linhas, colunas, matriz) {
-    var linhaCount, colunaCount, elementCount = 0;
-    // console.log(matriz);
-    for (linhaCount = 0; linhaCount < linhas; linhaCount++) {
-      // console.log('linhas: ', matriz[linha][coluna]);
-      // console.log(linhaCount);
-      for (colunaCount = 0; colunaCount < colunas; colunaCount++) {
-        elementCount++;
-      }
+  countLines: function (matriz) {
+    var linhaCount, colunaCount;
+    for(linhaCount = 0; linhaCount < matriz.length; linhaCount++){
+       for(colunaCount = 0; colunaCount < matriz[linhaCount].length; colunaCount++){
+        // colunaCount++;
+        // console.log('linha %d coluna %d', linhaCount, colunaCount);
+        // console.log('colunaCount', colunaCount);
+       }
     }
-    // console.log(elementCount);
+
     return linhaCount;
   },
-  countColumns: function (linhas, colunas, matriz) {
-    var linhaCount, colunaCount, elementCount = 0;
-    // console.log(matriz);
-    for (linhaCount = 0; linhaCount < linhas; linhaCount++) {
-      // console.log('linhas: ', matriz[linha][coluna]);
-      // console.log(linhaCount);
-      for (colunaCount = 0; colunaCount < colunas; colunaCount++) {
-        elementCount++;
-      }
-    }
-    // console.log(colunaCount);
-    return colunaCount;
+  countColumns: function (matriz) {
+    return matriz.length;
   }
-}
-
+};
 // module.exports = module;
-
-
-// var l = 5,
-//     c = 5;
-
-// var matriz = [];
-// matriz = [[2,2,2,2,2],  
-//      [1,0,0,0,1],  
-//      [1,0,1,0,1],
-//      [1,0,0,0,1],  
-//      [1,1,1,1,1]];
-
-// console.log('Matriz', matriz);
-// console.log('aaa', module.matriz_transposta(l, c, matriz));
-
-// matriz_transposta (l, c, matriz);
