@@ -17,8 +17,6 @@ Basicamente possuímos 4 funções para trabalhar com pilhas:
 
 - push
 - pop
-- pull
-- top
 
 {<8>}![](http://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Data_stack.svg/200px-Data_stack.svg.png)
 
