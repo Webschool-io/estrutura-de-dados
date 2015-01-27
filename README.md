@@ -13,4 +13,7 @@ Instalando o Mocha
 
 Rodando um teste
 
-    mocha matriz-transposta-test.js   
+    mocha exercicios/matriz-transposta/matriz-transposta-test.js
+
+Caso você queira contribuir nem que seja apenas com os exercícios em C, favor dar um Pull Request, seguindo os padrões dos outros, com o exercício e abrir uma issue para que o mesmo seja passado para JS.
+
