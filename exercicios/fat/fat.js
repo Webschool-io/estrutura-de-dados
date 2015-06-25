@@ -1,6 +1,6 @@
 /*
 @author: Aspira;
-@description: Caltula o fatorial do número digitado;
+@description: Calcula o fatorial do número digitado;
 @company: webschool;
 */
 
